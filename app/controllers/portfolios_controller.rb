@@ -25,7 +25,7 @@ def edit
  @portfolio_item = Portfolio.find(params[:id]) 
  end
 
- def update
+ def updat
   @portfolio_item = Portfolio.find(params[:id]) 
     respond_to do |format|
       if @portfolio_item.update(params.require(:portfolio).permit(:title, :subtitle, :body))
@@ -35,8 +35,24 @@ def edit
     end
   end
 
-  def show
-    @portfolio_item = Portfolio.find(params[:id])  
-  end
+def show
+    @portfolio_item = Portfolio.find(params[:id]) 
 
-end 
+end
+
+ def destroy
+     #this going to perform the look up
+     @portfolio_item = Portfolio.find(params[:id])
+
+    # Destroy/delete the record
+    @portfolio_item.destroy
+
+    # Redirect
+
+    respond_to do |format|
+      format.html { redirect_to portfolios_url, notice: 'Post was removed.' }
+      
+    end
+   end
+
+  end 

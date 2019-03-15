@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
   include DeviseWhitelist
   include SetSource
   include CurrentUserConcern
+  include DefaultPageContent
 end
   
 
@@ -14,5 +15,6 @@ end
   #then on the appl.html.erb
    # and added the .is_a?(User) to will remove the logout link in the page.
 
+   #  @page_title( @page_title is the default) is an instance variable(you add use it on any page) add you can add it to any page then override it to show what you want it to show in the tab.
 
 

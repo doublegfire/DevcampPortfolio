@@ -16,5 +16,6 @@ end
    # and added the .is_a?(User) to will remove the logout link in the page.
 
    #  @page_title( @page_title is the default) is an instance variable(you add use it on any page) add you can add it to any page then override it to show what you want it to show in the tab.
+     # REMEMBER KID HOW DATA FLOW WORKS*****
 
-
+  # the controller action pass data to the views via instance variables.

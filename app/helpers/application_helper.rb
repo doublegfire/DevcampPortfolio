@@ -8,9 +8,17 @@ module ApplicationHelper
     (link_to "login" ,  new_user_session_path)  
   end 
  end
-end
+
+   def source_helper(layout_name)
+    if session[:source]
+      greeting =  "Thanks for visting me from #{session[:source]} and you are on the #{layout_name} layout "
+      content_tag(:p, greeting,class: "source-greeting")
+    end
+   end     
+ end
 
 
 # added the plus will make them appair on one line
+# .html safe let the browers know its safe.
 
-
+# def source_helper is a stander ruby method so you pass arugments (layout_name) to each layout page.

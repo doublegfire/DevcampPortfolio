@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/doublegfire/darnel_view_tool
+  revision: 4d1e63c04eb51f0d393f1c62996778c497350d04
+  specs:
+    darnel_view_tool (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -209,6 +215,7 @@ DEPENDENCIES
   bootsnap (>= 1.1.0)
   bootstrap (~> 4.3.1)
   coffee-rails (~> 4.2)
+  darnel_view_tool!
   devise (~> 4.2)
   friendly_id (~> 5.1.0)
   jbuilder (~> 2.5)

@@ -14,6 +14,10 @@ module ApplicationHelper
       greeting =  "Thanks for visting me from #{session[:source]} and you are on the #{layout_name} layout "
       content_tag(:p, greeting,class: "source-greeting")
     end
+   end
+
+   def copyright_generator
+   DarnelViewTool::Renderer.copyright 'Guinel Gue', 'All right reserved'
    end     
  end
 

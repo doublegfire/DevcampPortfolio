@@ -51,7 +51,7 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
-gem 'darnel_view_tool', git: 'https://github.com/doublegfire/darnel_view_tool'
+gem 'gue_view_tool', git: 'https://github.com/doublegfire/gue_view_tool'
 
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

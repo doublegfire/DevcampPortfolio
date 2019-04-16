@@ -17,7 +17,7 @@ module ApplicationHelper
    end
 
    def copyright_generator
-   DarnelViewTool::Renderer.copyright 'Guinel Gue', 'All right reserved'
+  GueViewTool::Renderer.copyright 'Guinel Gue', 'All right reserved'
    end     
  end
 

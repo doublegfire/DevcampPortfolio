@@ -20,5 +20,6 @@
 
 <br>
 
-<%= link_to 'New Blog', new_blog_path %>
+<%= link_to 'New Blog', new_blog_path  if logged_in?(:site_admin) %>
 
+<%-#  if logged_in?(:admin, :customer, :etc) this will hide what ever you nneed to no tlet the person see on the site if thier not a user that loged in -%>

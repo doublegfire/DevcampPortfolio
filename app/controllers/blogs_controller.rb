@@ -2,6 +2,11 @@ class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy, :toggle_status]
   layout "blog"
 
+  access all: [:show, :index], user: {except: [:destroy, :new, :create, :update, :edit]},site_admin: :all
+  #access give and control the access to the blog
+  #what a login user can and cant do.
+  #and what the company_admin can do on the blog. 
+
   # GET /blogs
   # GET /blogs.json
   def index

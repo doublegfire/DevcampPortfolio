@@ -1,5 +1,5 @@
 module ApplicationHelper
-  def login_helper (style)
+  def login_helper style = ""
   if current_user.is_a?(GuestUser)  
  (link_to "Register" , new_user_registration_path, class: style) +
     " " .html_safe +
@@ -21,7 +21,7 @@ module ApplicationHelper
    end     
  end
 
-
+# i had an issue when i added style. i was getting a argument error'' wrong number of arugument give' so i added the ="". its an default arugument the can fix it 
 # added the plus will make them appair on one line
 # .html safe let the browers know its safe.
 

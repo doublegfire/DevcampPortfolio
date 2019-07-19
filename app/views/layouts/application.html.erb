@@ -30,9 +30,11 @@
 
           <%= render "shared/application_nav" %>
           <%= yield %>
-        <%= render "shared/application_footer" %>
+          <%= render "shared/application_footer" %>
 
-        <%= source_helper("application") %> 
+          <%= render "shared/alerts" %>
+
+          <%= source_helper("application") %> 
 
       </div>
     </div>

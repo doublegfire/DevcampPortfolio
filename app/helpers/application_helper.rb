@@ -61,8 +61,15 @@ module ApplicationHelper
 
  end
 
-# i had an issue when i added style. i was getting a argument error'' wrong number of arugument give' so i added the ="". its an default arugument the can fix it 
-# added the plus will make them appair on one line
-# .html safe let the browers know its safe.
+ def alerts
+  alert = (flash[:alert] || flash[:error] || flash[:notice])
 
-# def source_helper is a stander ruby method so you pass arugments (layout_name) to each layout page.
+   if alert 
+     alert_generator alert 
+   end
+ end
+
+ def alert_generator msg
+   js add_gritter(msg, title: "Guinel Gue Portfolio ", sticky: false)  
+ end
+

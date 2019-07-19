@@ -2,32 +2,30 @@
 
 <html>
   <head>
-
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title><%= @page_title %></title>
     <%= csrf_meta_tags %>
-   
-
     <meta name="keywords" content="<%= @seo_keywords %>" />
-
     <%= stylesheet_link_tag    'portfolios', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
     <!--Start of nav -->
- <%= render 'shared/portfolio_nav' %>
+  <%= render 'shared/portfolio_nav' %>
     <!--end of nav-->
 
    
-<%= render 'shared/portfolio_masthead'unless logged_in?(:site_admin) %>
+  <%= render 'shared/portfolio_masthead'unless logged_in?(:site_admin) %>
       
     
    
     <%= yield %>
-    <!-- start of footer -->
-<%= render 'shared/portfolio_footer'%>
-    <!-- end of footer -->
+    
+    <%= render 'shared/portfolio_footer'%>
+    
+    <%= alerts %>
+    
     
     <%= source_helper("application") %>
  

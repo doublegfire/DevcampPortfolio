@@ -3,5 +3,7 @@ class Comment < ApplicationRecord
   belongs_to :blog
 
   validates :content, presence: true, lenght: {minimum: 5, maximimum: 1000}
+
+  after_create_commit {CommentBroadcastJob.preform_later(self)}
 end
  

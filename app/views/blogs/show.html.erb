@@ -2,6 +2,14 @@
 <div class="col-sm-8 blog-main">
 
    <h2><%= @blog.title %></h2>
+
+
+   <P>
+     <%= @blog.topic.title %>
+   </P>
+
+
+
    <%= link_to 'Edit', edit_blog_path(@blog) if logged_in?(:site_admin) %> 
    <p>
     <%= @blog.body %>

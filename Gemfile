@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.4.0'
 
 
 gem 'rails', '~> 5.2.2'
@@ -53,4 +52,7 @@ gem 'twitter', '~> 6.2'
 gem 'redis', '~> 4.1', '>= 4.1.2'
 gem 'coderay', '~> 1.1', '>= 1.1.2'
 gem 'redcarpet', '~> 3.5'
+
+ruby '2.4.0'
+
 

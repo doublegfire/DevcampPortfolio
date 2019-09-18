@@ -1,16 +1,60 @@
-<strong><h1>About Me </h1></strong>
+<div class="app-card-container">
+   <div class="card">
+   <h3 class="about">About Me </h3>
+      <hr>
+      <div class="row">
+        <div class="col-md-4">
+          <%= image_tag "me.jpg", width: 175, alt: "Profile Image", class: 'Profile-img'%>
+        <div class="skills">
+          <% @skills.each do |skill| %>
+            <div class="skill">
+              <h4><%= skill.title%></h4>
+              <div class="progress">
+              <div 
+              class="progress-bar progress-bar-striped bg-warning"
+              role="progressbar"
+              aria-valuenow= "<%= skill.percent_utilized %>"
+              aria-valuemax= "100"
+              style="width: <%= skill.percent_utilized %>%"
+              ></div>
+             </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
 
-<hr>
 
-<div class="row">
-  <div class="col-md-4">
-    <%= image_tag "me.jpg", width: 175, alt: "Profile Image"%>
-  </div>
+        <div class="col-md-8">
+          <p> Software development has been a passion of mine for a while now dating back to 2014 when I was repaired smart phones. After browsing potential institutes, I decided to enroll in McFadden Technical School in Davie, Florida. At MTS, I worked thoroughly with HTML, CSS, Bootstrap and Wordpress the entirety of my enrollment. Upon completion of the program, the desire to learn more resonated within me. I wanted to master back end development. I made an ambitious move to Dallas to further my education at Tech Talent South where my Ruby on Rails journey started.</p>
 
-  <div class="col-md-8">
-    <p> Software development has been a passion of mine for a while now dating back to 2014 when I was repaired smart phones. After browsing potential institutes, I decided to enroll in McFadden Technical School in Davie, Florida. At MTS, I worked thoroughly with HTML, CSS, Bootstrap and Wordpress the entirety of my enrollment. Upon completion of the program, the desire to learn more resonated within me. I wanted to master back end development. I made an ambitious move to Dallas to further my education at Tech Talent South where my Ruby on Rails journey started.</p>
+          <p>
+            <button 
+            class="btn btn-primary"
+            type="button" 
+            data-toggle= "collapse"
+            data-target="#jobHistroy" 
+            aria-expanded="false"
+            aria-controller="jobHistroy"
+            >
+              Job History
+            </button>
+          </p>
+          <p>
+            <div class="collapse" id="jobHistroy">
+              <div>
+                <div>
+                <a href="https://www.linkedin.com/in/guinel-gue-19327343/" title="LinkedIn" class="btn btn-primary-linkedin btn-lg"><i class="fa fa-linkedin fa-fw"></i> LinkedIn</a> 
+                  
+                 </a>
+                </div>
+              </div>
+            </div>
+          </p>
+    </div>
+   </div>
   </div>
 </div>
+
 
 
 

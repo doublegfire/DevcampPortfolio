@@ -37,6 +37,10 @@ module ApplicationHelper
       {
        url: blogs_path,
        title: 'Blog'
+      },
+       {
+       url: portfolios_path,
+       title: 'Portfolio'
       },    
       {
        url: tech_news_path,

@@ -19,9 +19,9 @@
 
       <%= link_to 'Edit', edit_blog_path(@blog) if logged_in?(:site_admin) %> 
 
-       <% if @blog.body %>
-        <%= markdown @blog.body %>
-       <% end %>
+        <% if @blog.body %>
+          <p><%= markdown @blog.body %></p>
+        <% end %>
 
        <%= render'comments/comment_form'%>
 

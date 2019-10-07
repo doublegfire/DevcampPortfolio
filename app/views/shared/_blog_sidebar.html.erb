@@ -9,10 +9,13 @@
          
 
           <div class="sidebar-module">
+            <% if @side_bar_topics && @side_bar_topics.any? %>
             <h4>Topics</h4>
              <% @side_bar_topics.each do |topic|%>
              <P><%= link_to topic.title, topic_path(topic)%></P>
              <% end %>
+             <% end %>
+
           </div>
          
           <div class="sidebar-module">

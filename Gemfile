@@ -32,7 +32,7 @@ gem 'gue_view_tool', '~> 0.1.0'
   
  
 
- gem 'nokogiri', '~> 1.10', '>= 1.10.4'
+ gem 'nokogiri', '~> 1.10'
                   
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'friendly_id', '~> 5.1.0'
